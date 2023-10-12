@@ -1,0 +1,47 @@
+.tabs {
+  $block-name: &; // #{$block-name}__element
+
+  &__labels {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    margin-bottom: 33px;
+  }
+
+  &__label {
+    @include main-btn;
+    position: relative;
+    border: 1px solid var(--border-button);
+
+    &--active {
+      z-index: 3;
+      color: var(--color-white);
+      background-color: var(--color-blue);
+      cursor: default;
+    }
+  }
+
+  &__panes {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-top: 0;
+  }
+
+  &__pane {
+    grid-area: tab;
+    grid-column: 1/2;
+    width: 100%;
+    transform: translateY(16px);
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+
+    &--active {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    &__left {
+        padding: 45px;
+        border: 1px solid var(--color-gray);
+        border-radius: 5px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+    }
+
+    &__title-required {
+        color: red;
+    }
+
+    &__mm-yy {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__mm-yy-input {
+        width: 80px;
+    }
+
+    &__mm-yy-lash {
+        display: block;
+        font-size: 30px;
+        font-weight: 600;
+    }
+}

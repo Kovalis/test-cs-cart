@@ -1,0 +1,45 @@
+
+//- Все примеси в этом файле должны начинаться c имени блока (card-info)
+//- Упоминание имени блока в классах обязательно, без этого он не попадёт в сборку
+
+mixin card-info
+
+  //- Вызов:
+        +card-info
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' card-info--' + modsList[i].trim();
+      }
+    }
+
+  .card-info(class=allMods)&attributes(attributes)
+    .card-info__left
+        .card-info__item
+            .card-info__title
+              | Card number&nbsp;
+              span.card-info__title-required *
+            input.input(type="text")
+        .card-info__item
+            .card-info__title
+              | Valid thru (mm/yy)&nbsp;
+              span.card-info__title-required *
+            .card-info__mm-yy
+              input.card-info__mm-yy-input.input(type="text")
+              .card-info__mm-yy-lash /
+              input.card-info__mm-yy-input.input(type="text")
+            .card-info__item
+            .card-info__title
+                | Cardholder's name&nbsp;
+                span.card-info__title-required *
+            input.input(type="text")
+    .card-info__right
+        .card-info__item
+            .card-info__title
+              | CVV/CVC&nbsp;
+              span.card-info__title-required *
+            input.input(type="text")

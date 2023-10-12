@@ -1,0 +1,27 @@
+@mixin main-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    min-height: 84px;
+    min-width: 410px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 33px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main-btn {
+    @include main-btn;
+
+    display: block;
+    background-color: var(--color-orange);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    min-width: 200px;
+    padding: 20px 30px;
+    color: var(--color-white);
+    text-align: center;
+}

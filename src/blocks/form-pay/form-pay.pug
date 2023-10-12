@@ -1,0 +1,55 @@
+
+//- Все примеси в этом файле должны начинаться c имени блока (form-pay)
+//- Упоминание имени блока в классах обязательно, без этого он не попадёт в сборку
+
+mixin form-pay
+
+  //- Вызов:
+        +form-pay
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' form-pay--' + modsList[i].trim();
+      }
+    }
+
+  .form-pay(class=allMods)&attributes(attributes)
+    form(action="")
+      img.form-pay__logo(src="./img/logo.png", alt="", width="364px", height="114px")
+      .form-pay__title Checkout
+      .form-pay__products
+        .form-pay__item
+          .form-pay__small-title Products
+          .form-pay__products-list
+            a.form-pay__product-link(href="#") Apple® - iPad® with Retina® display Wi-Fi - 32GB - White
+            .form-pay__product-price $499.00
+          .form-pay__products-list
+            a.form-pay__product-link(href="#") 16GB A Series Walkman Video MP3
+            .form-pay__product-price $130.00
+        .form-pay__item
+          .form-pay__small-title Shipping method
+          .form-pay__products-list
+            .form-pay__product-link FedEx
+            .form-pay__product-price $13.99
+        .form-pay__item
+          .form-pay__small-title Payment method
+          .tabs
+            .tabs__labels
+              .tabs__label.tabs__label--active(data-href='#tab1') Credit card
+              .tabs__label(data-href='#tab2') Gift card
+              .tabs__label(data-href='#tab3') PayPal
+            .tabs__panes
+              .tabs__pane.tabs__pane--active#tab1
+                +card-info
+              .tabs__pane#tab2 Содержимое, таб 2
+              .tabs__pane#tab3 Содержимое, таб 3
+        label(for="")
+          input(type="checkbox")
+          span
+            | I accept the&nbsp;
+            a(href="#") Terms and Conditions
+        button.main-btn Place order ($624.99)

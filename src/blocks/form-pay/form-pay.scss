@@ -1,0 +1,36 @@
+.form-pay {
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 120px;
+    }
+
+    &__title {
+        font-size: 55px;
+        font-weight: 600;
+        margin-bottom: 45px;
+    }
+
+    &__item {
+        margin-bottom: 62px;
+    }
+
+    &__products-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 15px;
+        margin-bottom: 35px;
+        font-size: 33px;
+    }
+
+    &__small-title {
+        margin-bottom: 40px;
+        font-size: 45px;
+        font-weight: 600;
+    }
+
+    &__product-link {
+        color: var(--color-blue);
+    }
+}
