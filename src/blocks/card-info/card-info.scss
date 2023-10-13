@@ -1,12 +1,17 @@
 .card-info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 60% 1fr;
     gap: 30px;
 
     &__left {
         padding: 45px;
         border: 1px solid var(--color-gray);
         border-radius: 5px;
+    }
+
+    &__left,
+    &__right {
+        padding-top: 45px;
     }
 
     &__title {
@@ -20,7 +25,7 @@
     }
 
     &__title-required {
-        color: red;
+        color: var(--color-orange);
     }
 
     &__mm-yy {

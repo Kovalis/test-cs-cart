@@ -5,12 +5,13 @@
 
   @include input;
 
+  width: 100%;
   padding: 10px;
-  min-height: 60px;
+  min-height: 100px;
   border: 1px solid var(--color-gray);
   transition: border 0.25s ease-out, outline 0.25s ease-out;
   appearance: none;
-
+  outline: none;
 
   &[disabled] {
     cursor: not-allowed;

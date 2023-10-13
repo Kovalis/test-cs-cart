@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+a {
+    color: var(--color-black);
+}
+
 .main-btn {
     @include main-btn;
 
@@ -21,7 +25,25 @@
     border-radius: 5px;
     width: 100%;
     min-width: 200px;
-    padding: 20px 30px;
+    padding: 40px 30px;
     color: var(--color-white);
     text-align: center;
+}
+
+.accept-block {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 45px;
+    margin-bottom: 30px;
+    background-color: #fafafa;
+    border: 1px solid var(--color-gray);
+    font-size: 30px;
+
+    [type="checkbox"] {
+        width: 25px;
+        height: 25px;
+        border-radius: 10px;
+    }
+
 }
