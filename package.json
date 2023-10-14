@@ -92,7 +92,8 @@
     "autosize": "^5.0.2",
     "credit-card-input-mask": "^3.0.0",
     "imask": "^6.6.3",
-    "sanitize.css": "^13.0.0"
+    "sanitize.css": "^13.0.0",
+    "tippy.js": "^6.3.7"
   },
   "husky": {
     "hooks": {

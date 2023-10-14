@@ -18,7 +18,7 @@ mixin form-pay
     }
 
   .form-pay(class=allMods)&attributes(attributes)
-    form(action="")
+    form.js-form-pay-submit(action="", novalidate)
       img.form-pay__logo(src="./img/logo.png", alt="", width="364px", height="114px")
       .form-pay__title Checkout
       .form-pay__products
@@ -47,8 +47,8 @@ mixin form-pay
                 +card-info
               .tabs__pane#tab2 Содержимое, таб 2
               .tabs__pane#tab3 Содержимое, таб 3
-        label.accept-block(for="")
-          input(type="checkbox")
+        label.js-required.accept-block
+          input(type="checkbox", required)
           span
             | I accept the&nbsp;
             a(href="#") Terms and Conditions
