@@ -3,6 +3,7 @@ import ready from "../../js/utils/documentReady.js";
 // import IMask from "imask";
 import CreditCardInputMask from "credit-card-input-mask";
 import tippy from 'tippy.js';
+import { initPopup } from "../../js/common/popup.js";
 
 ready(function () {
 
@@ -65,4 +66,13 @@ ready(function () {
         event.preventDefault();
         checkedInputs();
     });
+
+    //popup
+    const choosePopup = document.querySelector(".popup");
+    const chooseBtn = document.querySelector(".js-popup");
+    if (choosePopup && chooseBtn) {
+      const popupClass = ".popup";
+      const triggerBtn = ".js-popup";
+      initPopup(popupClass, triggerBtn);
+    }
 });
