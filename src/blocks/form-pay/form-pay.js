@@ -12,6 +12,8 @@ ready(function () {
     const formPaySubmit = formPay.querySelector('.js-form-pay-submit');
     const numberCard = formPay.querySelector('.js-card-number');
     const cvvCard = formPay.querySelector('.js-card-cvv');
+    const mmCard = formPay.querySelector('.js-mm');
+    const yyCard = formPay.querySelector('.js-yy');
     let flagSentForm = true;
 
     const formattedCreditCardInput = new CreditCardInputMask({
@@ -22,6 +24,16 @@ ready(function () {
     const formattedCvvCard = new CreditCardInputMask({
         element: cvvCard,
         pattern: "{{999}}",
+    });
+
+    const formattedMm = new CreditCardInputMask({
+        element: mmCard,
+        pattern: "{{99}}",
+    });
+
+    const formattedYy = new CreditCardInputMask({
+        element: yyCard,
+        pattern: "{{99}}",
     });
 
     tippy('[data-tippy-content]');

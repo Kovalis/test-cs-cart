@@ -1,7 +1,11 @@
 .card-info {
     display: grid;
-    grid-template-columns: 60% 1fr;
+    grid-template-columns: 1fr;
     gap: 30px;
+
+    @media screen and (min-width: $screen-ti) {
+        grid-template-columns: 60% 1fr;
+    }
 
     &__left {
         padding: 45px;
