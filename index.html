@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=3, minimum-scale=0.1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="google" content="notranslate">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="index, follow">
+  <link rel="preload" href="/fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Lato-Semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Lato-Heavy.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#5bbad5">
+  <meta name="theme-color" content="#000">
+  <meta name="msapplication-navbutton-color" content="#000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+  <title>Стартовая страница</title>
+  <meta name="description" content="description">
+  <meta name="keywords" content="keywords">
+  <link rel="stylesheet" href="/css/style.css"><script>// Убрать на html класс "no-js", добавить класс "js": с уровня стилей знаем работает ли JS
+document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+// Браузер и ОС
+function cth(c){document.documentElement.classList.add(c)}
+'ontouchstart' in window?cth('touch'):cth('no-touch');
+if(typeof InstallTrigger!=='undefined')cth('firefox');
+if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
+if(/*@cc_on!@*/!!document.documentMode)cth('ie');
+if(!(!!document.documentMode)&&!!window.StyleMedia)cth('edge');
+if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
+if(~navigator.appVersion.indexOf("Win"))cth('windows');
+if(~navigator.appVersion.indexOf("Mac"))cth('osx');
+if(~['iPad','iPhone','iPod'].indexOf(navigator.platform))cth('ios');
+if(~navigator.appVersion.indexOf("Linux"))cth('linux');
+
+// Добавление 1vh (использование: height: 100vh; height: calc(var(--vh, 1vh) * 100);) для фикса 100vh на мобилках
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+</script>
+</head>
+
+<body><noscript>У вас отключен JavaScript.</noscript>
+  <div class="page">
+    <div class="page__main">
+      <div class="container">
+        <div class="form-pay">
+          <form class="js-form-pay-submit" action="" novalidate="novalidate"><img class="form-pay__logo" src="./img/logo.png" alt="" width="364px" height="114px" />
+            <div class="form-pay__title">Checkout</div>
+            <div class="form-pay__products">
+              <div class="form-pay__item">
+                <div class="form-pay__small-title">Products</div>
+                <div class="form-pay__products-list"><a class="form-pay__product-link" href="#">Apple® - iPad® with Retina® display Wi-Fi - 32GB - White</a>
+                  <div class="form-pay__product-price">$499.00</div>
+                </div>
+                <div class="form-pay__products-list"><a class="form-pay__product-link" href="#">16GB A Series Walkman Video MP3</a>
+                  <div class="form-pay__product-price">$130.00</div>
+                </div>
+              </div>
+              <div class="form-pay__item">
+                <div class="form-pay__small-title">Shipping method</div>
+                <div class="form-pay__products-list">
+                  <div class="form-pay__product-link">FedEx</div>
+                  <div class="form-pay__product-price">$13.99</div>
+                </div>
+              </div>
+              <div class="form-pay__item">
+                <div class="form-pay__small-title">Payment method</div>
+                <div class="tabs">
+                  <div class="tabs__labels">
+                    <div class="tabs__label tabs__label--active" data-href="#tab1">Credit card</div>
+                    <div class="tabs__label" data-href="#tab2">Gift card</div>
+                    <div class="tabs__label" data-href="#tab3">PayPal</div>
+                  </div>
+                  <div class="tabs__panes">
+                    <div class="tabs__pane tabs__pane--active" id="tab1">
+                      <div class="card-info">
+                        <div class="card-info__left">
+                          <div class="card-info__item">
+                            <div class="card-info__title">Card number&nbsp;<span class="card-info__title-required">*</span></div><input class="js-required js-card-number input" type="text" required="required" />
+                          </div>
+                          <div class="card-info__item">
+                            <div class="card-info__title">Valid thru (mm/yy)&nbsp;<span class="card-info__title-required">*</span></div>
+                            <div class="card-info__mm-yy"><input class="js-required card-info__mm-yy-input input js-mm" type="text" required="required" />
+                              <div class="card-info__mm-yy-lash">/</div><input class="js-required card-info__mm-yy-input input js-yy" type="text" required="required" />
+                            </div>
+                            <div class="card-info__item"></div>
+                            <div class="card-info__title">Cardholder's name&nbsp;<span class="card-info__title-required">*</span></div><input class="js-required input" type="text" required="required" />
+                          </div>
+                        </div>
+                        <div class="card-info__right">
+                          <div class="card-info__item">
+                            <div class="card-info__title">CVV/CVC&nbsp;<span class="card-info__title-required">*</span></div>
+                            <div class="card-info__cvv"><input class="js-required js-card-cvv card-info__cvv-input input" type="text" required="required" />
+                              <div class="card-info__cvv-tooltip" data-tippy-content="CVV находится на обратной стороне карты из трех символов">?</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tabs__pane" id="tab2">Содержимое, таб 2</div>
+                    <div class="tabs__pane" id="tab3">Содержимое, таб 3</div>
+                  </div>
+                </div>
+              </div><label class="js-required accept-block"><input type="checkbox" required="required" /><span>I accept the&nbsp;<a class="js-popup" href="#">Terms and Conditions</a></span></label><button class="main-btn">Place order ($624.99)</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup">
+    <div class="popup__inner">
+      <div class="popup__background js-popup-background">
+        <div class="popup__container js-popup-container">
+          <div class="popup__content">
+            <div class="popup__header">
+              <div class="popup__title">Terms and Conditions</div><button class="popup__close-btn js-popup-close-btn"><span class="wrap-icon"><img src="./img/icon-close.svg" alt="" width="20px" height="20px"/></span></button>
+            </div>
+            <div class="popup__main">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, quis nobis, corrupti repudiandae beatae adipisci odit aperiam unde voluptatibus esse nisi blanditiis aliquam odio, provident atque error aut sunt? Tenetur vel doloribus unde possimus! Voluptas incidunt facilis, quis explicabo doloremque laborum excepturi libero quidem debitis repellat rem corporis et, distinctio ex quia nihil dolores. Corporis dignissimos officiis ad, aliquam dolorem impedit aspernatur quae accusantium error repudiandae eveniet ex perferendis. Id dolorem eveniet fugiat pariatur nesciunt quis quidem, voluptate porro minima sequi dignissimos eligendi incidunt, nemo in odio obcaecati ab quisquam aut! Fugit dolorum ex voluptatem, ad nam quos nemo temporibus adipisci at, dicta similique voluptas corporis cupiditate, enim animi. Libero, quia praesentium, minus hic alias nisi pariatur possimus facilis quam corporis, vitae consequatur cupiditate tempora nihil fugit debitis fuga eveniet qui neque. Atque illum odit accusamus libero ullam assumenda velit nostrum similique neque quis est expedita corporis rerum odio quod molestiae blanditiis maiores dignissimos voluptatum ipsa, corrupti dicta ad numquam? Atque praesentium, animi neque voluptates ab impedit iusto asperiores odio at optio earum placeat soluta eaque hic sint, repudiandae molestiae rem. Dolores explicabo a alias quo veritatis, beatae iure minus cupiditate nemo fugiat. Recusandae in similique praesentium cumque tenetur repellat rem hic ex quos molestias iure quam incidunt nesciunt, facere quidem ut architecto fuga delectus consequatur, maiores quaerat, quas dolorum modi. Sed aut temporibus architecto hic, eos eaque quae sint. Debitis sequi a hic consectetur atque. Quis, necessitatibus sapiente numquam, ipsum quia facere consequatur repellendus excepturi, rerum esse repellat vero voluptate officiis aliquid sit itaque. Possimus, eligendi blanditiis! Non voluptatibus suscipit, quaerat quidem magnam aliquam cumque ipsum nemo, atque fugiat sapiente fuga, perspiciatis recusandae. Odio quasi doloribus quia ipsa adipisci pariatur perspiciatis ex fugit. Officiis repellendus illum laborum odio sed deserunt animi harum, vitae dolore? Adipisci, sequi libero laudantium recusandae, laboriosam quas ullam sed cupiditate reprehenderit voluptatem quisquam molestias? Nostrum aperiam, sequi doloremque reprehenderit aliquam possimus ad illum voluptate dicta sunt! Odio, suscipit quos distinctio nisi minima, illum, nulla optio dolorem voluptatum non corrupti veritatis eaque culpa deserunt ratione autem aut earum reprehenderit quasi. Sint, quo pariatur explicabo sequi ullam ab beatae, praesentium voluptates quaerat ea, sapiente consectetur natus provident delectus dolores excepturi consequuntur temporibus odio illo impedit. Doloribus ipsam odit nulla excepturi doloremque voluptatem ipsum ratione cum corporis culpa. Quis sapiente quia recusandae aliquid nobis rerum provident nihil, facere deserunt earum tempora ratione, rem optio vero non! Tempora, quo vel quos eveniet perspiciatis magnam, ducimus fugiat nesciunt adipisci autem doloribus nostrum quidem laudantium esse exercitationem aut quia aliquam? Repellendus omnis enim voluptatibus nulla molestias quasi magni maxime nihil! Magni, aperiam. Iure fugiat quis sit et doloribus quod omnis, quisquam atque nisi vitae dolorum accusamus nihil sapiente nam eligendi nostrum corrupti laborum quibusdam voluptas rerum quia cum? Ut consequatur rem temporibus ullam distinctio vero. Deserunt nostrum unde quis illum sed ipsum natus similique laborum sunt architecto atque, ea autem dolores excepturi. Provident quia reprehenderit excepturi commodi saepe. Recusandae enim autem reprehenderit tempora sed eos quidem odio in ipsa nulla. Fugiat tenetur doloribus repudiandae beatae est aspernatur! Ducimus eligendi magni eum atque facere nam, soluta, quam labore sit sunt error earum eos dolor cumque sint iste eius pariatur libero numquam harum quae quibusdam hic officiis autem? Voluptatum fugit ratione magnam earum nam veniam ipsa voluptatem beatae facere tempora laboriosam doloremque iste, ea, illo sunt ad quia iusto possimus voluptate sint porro. Sint, eius voluptas inventore fugiat saepe voluptatem ad modi quam. Voluptate odit iure, totam soluta vero perspiciatis nemo facere ducimus magnam nisi, laudantium voluptatem nobis! Aliquam saepe consectetur soluta! At molestias quod natus asperiores, ut quas id rem obcaecati animi hic consequuntur cupiditate dolore aut repellendus dolorum eaque maiores blanditiis architecto. Enim accusamus odio eaque, expedita reiciendis facere in rem quidem. Itaque, iusto? Deserunt sunt debitis aliquid. Nesciunt in, consectetur similique necessitatibus voluptas sapiente id iusto cum aspernatur iure aut sit perferendis fuga natus repellat beatae nulla esse ut, libero quae fugiat at quidem aliquid? Quaerat commodi sint magni praesentium omnis quas, ab deleniti fugit suscipit, aut, dolorem dolore delectus non. Qui totam accusantium beatae quae assumenda dolorum rem facilis consequatur. Aliquam modi quia quaerat optio ipsam doloremque cupiditate at quod quos ab dolore, natus cum eveniet sequi quasi ullam quibusdam porro tempora maxime impedit consequatur! Nihil ipsam minus nesciunt aperiam corrupti iusto eos sunt neque enim asperiores beatae ullam dolorem repellendus, ab suscipit totam obcaecati sint corporis dolore fuga aut architecto reiciendis? Dolore vel debitis, harum laboriosam sed voluptatum fugit ex dignissimos modi quis nam, dolor delectus explicabo veniam incidunt expedita est eum voluptate distinctio. Ex veritatis ducimus inventore itaque aliquid, laboriosam autem eligendi, voluptatibus nobis sed cupiditate a saepe sequi obcaecati possimus, enim fugiat culpa at eos perferendis! Est nisi cumque odit eius soluta tenetur voluptates velit nostrum fuga voluptas nulla, ducimus nemo maiores quisquam cum alias amet voluptate accusantium eveniet! Iusto deleniti aliquam quae culpa aut totam ex commodi in debitis officiis eos, hic accusamus ratione id ipsam, voluptatum fugiat, doloribus obcaecati quos reprehenderit saepe aperiam delectus consectetur? Odit tenetur ratione itaque id maiores, at ducimus deleniti rerum inventore ipsum adipisci enim dolorem nisi omnis similique ullam voluptatibus, eum hic commodi natus ipsam porro quae. Temporibus totam, molestiae cum veritatis ab officiis! Magni inventore, dignissimos aliquam tempora exercitationem repudiandae expedita, quia aperiam similique illo quos animi earum nisi nobis necessitatibus vitae beatae pariatur provident eveniet dolore illum! Voluptates, maxime error pariatur libero eveniet nesciunt eligendi incidunt impedit eius assumenda numquam, itaque nostrum iusto quo deserunt facere excepturi aliquam quod quibusdam! Nemo, ducimus. Consequuntur similique sed voluptatem magni repellat! Natus, consequatur quae inventore illo commodi corrupti tempore impedit atque rem voluptas dignissimos architecto aliquam beatae error incidunt facere suscipit? Rerum, ipsam molestiae? Accusamus provident quaerat impedit voluptate voluptates, ea, sit minus cum delectus dolore officiis optio nesciunt dolorum qui eos? Debitis labore, maxime rem tenetur voluptas pariatur ducimus incidunt minima quasi quisquam inventore nesciunt animi soluta quae voluptatem deserunt sint ad possimus excepturi exercitationem ex consequatur corrupti ab? Natus iste quia corporis labore vel sapiente sunt nihil quasi!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><script src="/js/bundle.js"></script>
+</body>
+
+</html>
